@@ -1,0 +1,91 @@
+// header
+
+@mixin header{
+    width: 100%;
+    min-height: 62px;
+    display: flex;
+    justify-content: center;
+}
+
+// gradient
+
+@mixin gradient($list) { 
+    background: linear-gradient($list);
+}
+
+// Fonctionnement
+
+@mixin block-use {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorBackLight;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 24px 0;
+    min-height: 73px;
+    transition: all 450ms;
+    &:hover{
+        background-color: $colorBackViolet;
+    }
+    &:hover i{
+        color: $colorPrimary;
+    }
+}
+
+@mixin use-number {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    left: -15px;
+    background-color: $colorPrimary;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+
+//  Section Cards restaurants
+
+@mixin image {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    position: center center;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;   
+}
+
+@mixin new {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute; 
+    width: 80px;
+    height: 30px;   
+    top: 13px;
+    right: 12px;
+    color: $colorFifth; 
+    font-weight: bold;
+    background-color: $colorThird;
+    border-radius: 3px;       
+}
+
+@mixin contentCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 335px;
+    height: 77px;
+    padding: 20px 24px 20px 14px;
+    background-color: $colorFourth;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: $colorBlack;       
+}
+
+@mixin heart{
+    
+}

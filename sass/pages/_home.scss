@@ -1,0 +1,114 @@
+// Section Header
+
+.head{
+    width: 100%;
+    &__location {
+        display: flex;
+        justify-content: center;
+        padding: 22px 0;
+        background-color: rgb(211, 208, 208);
+    }
+    &__location i{
+        padding-right: 12px;
+    }
+    &__heading {
+        padding: 47px 0;
+        display: flex;
+        min-height: 285px;
+        align-items: center;
+        flex-direction: column;
+        background-color: $colorBackLight;
+        text-align: center;
+        font-size: 800;   
+
+    }
+    &__heading button{
+        width: 220px;
+        height: 50px;
+        @include gradient($list1);
+        color: white;
+        font-weight: bold;
+        margin-top: 34px;
+        padding: 19px 22px;
+        border-radius: 30px; 
+        border-style: none;    
+    }
+    &__heading h2 {
+        margin-bottom: 23px;
+        font-weight: bold;
+    }
+}
+
+// Section Use
+
+.fonctionnement {
+    width: 100%;
+    padding: 56px 20px;
+    .use {
+        width: 100%;
+        margin-top: 32px;
+        &__items{
+            @include block-use; 
+            position: relative;          
+        }
+        &__items div{
+            @include use-number;
+        }
+        &__items i {
+            position: absolute;
+            left: 40px;
+            color: grey;
+        }
+    }   
+}
+
+//  Section Cards restaurants
+.section-resto {
+    width: 100%;
+    padding: 56px 20px;
+    background-color: $colorBackLight;
+    .restaurants {
+        width: 100%;
+        // Container card
+        .card {         
+            display: flex;
+            justify-content: center;
+            padding: 9px 0;
+            
+            // Container image card
+            &__img {
+                width: 335px;
+                height: 175px;
+                position: relative;
+            }
+
+            // Image card
+            &__img img {
+                @include image;             
+            }
+
+            // vignette Nouveau
+            &__img p {
+                @include new;               
+            }
+
+            // Texte card
+            &__content {              
+                @include contentCard;
+            } 
+            
+            &__title {
+                font-weight: bold;
+            }
+            // Icone coeur
+            &__content i{
+                width: 23px;
+                height: 21px;
+                font-weight: unset;
+            }
+        }       
+    }    
+}
+
+
+

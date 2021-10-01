@@ -10,7 +10,16 @@
 @import './components/buttons';
 
 // Import fichiers layout
-@import './layout/header';
+// @import './layout/header';
 @import './layout/nav';
+@import './layout/footer';
+
+
+// Import fichiers pages
+@import './pages/home';
+@import './pages/laPaletteDuGout';
+@import './pages/laNoteEnchantee';
+@import './pages/aLaFrancaise';
+@import './pages/leDeliceDesSens';
 
 
