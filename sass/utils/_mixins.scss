@@ -9,8 +9,8 @@
 
 // gradient
 
-@mixin gradient($list) { 
-    background: linear-gradient($list);
+@mixin gradient($direction, $list) { 
+    background: linear-gradient($direction, $list);
 }
 
 // Fonctionnement
@@ -58,6 +58,8 @@
     border-top-right-radius: 13px;   
 }
 
+// Pastille Nouveau
+
 @mixin new {
     display: flex;
     justify-content: center; 
@@ -73,6 +75,7 @@
     border-radius: 3px;       
 }
 
+// Contenu des cartes
 @mixin contentCard {
     display: flex;
     align-items: center;

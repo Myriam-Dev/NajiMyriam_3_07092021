@@ -25,7 +25,7 @@
     &__heading button{
         width: 220px;
         height: 50px;
-        @include gradient($list1);
+        @include gradient(to bottom right, $list1);
         color: white;
         font-weight: bold;
         margin-top: 34px;
@@ -44,16 +44,34 @@
 .fonctionnement {
     width: 100%;
     padding: 56px 20px;
+
     .use {
         width: 100%;
         margin-top: 32px;
+        padding-left: 15px;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+    
+        }
+    
         &__items{
             @include block-use; 
-            position: relative;          
+            position: relative;    
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                width: 30%;
+                min-width: 310px;
+                margin: 10px;
+            }              
         }
+
         &__items div{
-            @include use-number;
+            @include use-number;    
         }
+
         &__items i {
             position: absolute;
             left: 40px;
@@ -69,12 +87,23 @@
     background-color: $colorBackLight;
     .restaurants {
         width: 100%;
+        padding-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (min-width: 750px) {
+            justify-content: space-between;
+         }
+
         // Container card
         .card {         
             display: flex;
             justify-content: center;
             padding: 9px 0;
-            
+            @media screen and (min-width: 750px) {
+                // width: 49%;
+             }
+   
             // Container image card
             &__img {
                 width: 335px;
