@@ -1,3 +1,4 @@
+
 // Section Header
 
 .head{
@@ -8,9 +9,11 @@
         padding: 22px 0;
         background-color: rgb(211, 208, 208);
     }
+
     &__location i{
         padding-right: 12px;
     }
+
     &__heading {
         padding: 47px 0;
         display: flex;
@@ -20,8 +23,8 @@
         background-color: $colorBackLight;
         text-align: center;
         font-size: 800;   
-
     }
+
     &__heading button{
         width: 220px;
         height: 50px;
@@ -32,10 +35,6 @@
         padding: 19px 22px;
         border-radius: 30px; 
         border-style: none;    
-    }
-    &__heading h2 {
-        margin-bottom: 23px;
-        font-weight: bold;
     }
 }
 
@@ -49,12 +48,10 @@
         width: 100%;
         margin-top: 32px;
         padding-left: 15px;
-
         @media screen and (min-width: 1024px) {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
-    
+            justify-content: space-evenly;    
         }
     
         &__items{
@@ -92,17 +89,15 @@
         flex-wrap: wrap;
         justify-content: center;
         @media screen and (min-width: 750px) {
-            justify-content: space-between;
-         }
+            justify-content: space-evenly;
+        }
 
         // Container card
         .card {         
             display: flex;
             justify-content: center;
             padding: 9px 0;
-            @media screen and (min-width: 750px) {
-                // width: 49%;
-             }
+            margin: 5px;
    
             // Container image card
             &__img {
@@ -129,10 +124,9 @@
             &__title {
                 font-weight: bold;
             }
+
             // Icone coeur
             &__content i{
-                width: 23px;
-                height: 21px;
                 font-weight: unset;
             }
         }       

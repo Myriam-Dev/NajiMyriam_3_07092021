@@ -7,7 +7,7 @@
         align-items: center;
     }
     &__returnHome i{
-        font-size: 15px;
+        font-size: 1.6rem;
         font-weight: bold;
     }  
     img {
@@ -49,18 +49,23 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 9px;
+        position: relative;
     }
 
-    &__title i{
-        width: 25px;
-        height: 25px;
-        font-weight: unset;
+    &__title .far.fa-heart{
+        font-size: 1.6rem;
+        right: 27px;
+        z-index: 10;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            @include gradient(to bottom right, $list1);
+        }
     }
 }
 
 // Bloc menu items
 
-.entree {
+.food {
     &__title {
         width: fit-content;
         text-transform: uppercase;
@@ -73,27 +78,72 @@
             height: 5px;
             margin-top: 9px;
             background-color: $colorThird;
-        }  
-    }
-}
-
-.menuItems {
-    background-color: $colorFourth;
-    margin: 13px 0;
-    padding: 16px 23px 16px 12px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__title {
-        padding-bottom: 15px;
+        }
+        
+        
     }
 
-    &__content {
-        width: 100%;
+    .menuItems {
+        background-color: $colorFourth;
+        margin: 13px 0;
+        padding: 0px 0px 0px 12px;
+        border-radius: 10px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
-    }
+        overflow: hidden;
+
+        &:hover .menuItems__iconCheck{
+            width: 17%;
+        }
+        &:hover .menuItems__price{
+            width: 33%;
+        }
+        &:hover .menuItems__text{
+            width: 50%;
+        }
+
+        &__title {
+            padding-bottom: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    
+        &__text {
+            width: 83%;
+            padding: 16px 0px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;     
+            }
+        }
+
+        &__price {
+            padding: 16px 23px 16px 0;
+            width: 17%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__iconCheck {
+            width: 0;
+            height: 89px;
+            overflow: hidden;
+            background-color: $colorThird;
+            transition: width .5s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }   
 }
+
+
 

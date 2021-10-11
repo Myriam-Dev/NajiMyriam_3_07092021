@@ -13,6 +13,7 @@
     background: linear-gradient($direction, $list);
 }
 
+// Page d'accueil
 // Fonctionnement
 
 @mixin block-use {
@@ -87,8 +88,4 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     color: $colorBlack;       
-}
-
-@mixin heart{
-    
 }
