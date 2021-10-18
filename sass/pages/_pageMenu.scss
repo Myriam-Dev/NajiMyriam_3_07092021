@@ -58,13 +58,7 @@
     &__title .far.fa-heart{
         font-size: 1.6rem;
         right: 27px;
-
-        &:hover {
-            font-weight: bold;
-            background: linear-gradient($list1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        @include heart;
     }
 
     .food {

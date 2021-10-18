@@ -22,7 +22,6 @@
         flex-direction: column;
         background-color: $colorBackLight;
         text-align: center;
-        font-size: 800;   
     }
 
     &__heading button{
@@ -128,6 +127,7 @@
             // Icone coeur
             &__content i{
                 font-weight: unset;
+                @include heart;
             }
         }       
     }    
