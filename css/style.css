@@ -23,7 +23,16 @@ h1, .loader {
   font-family: "Shrikhand", cursive;
 }
 
-.loader {
+.block-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.699);
+  z-index: 50;
+  animation: block-loader 3s linear;
+  visibility: hidden;
+}
+.block-loader .loader {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -31,87 +40,136 @@ h1, .loader {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.486);
   visibility: hidden;
 }
-.loader > div {
+.block-loader .loader > div {
   font-size: 3em;
   animation: loader 3s cubic-bezier(0, 0.66, 0.67, 1.01) alternate;
   visibility: hidden;
+  margin: 4px;
 }
-.loader > div:nth-child(1) {
+.block-loader .loader > div:nth-child(1) {
   color: #9356DC;
-  animation-delay: 0.1s;
+  animation-delay: 0s;
 }
-.loader > div:nth-child(2) {
+.block-loader .loader > div:nth-child(2) {
   color: #FF79DA;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
-.loader > div:nth-child(3) {
+.block-loader .loader > div:nth-child(3) {
   color: #99E2D0;
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 @keyframes loader {
   0% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0.493));
+    transform: translateY(40px);
     visibility: visible;
     opacity: 1;
   }
   10% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(60px);
     visibility: visible;
     opacity: 1;
   }
   20% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(60px);
     visibility: visible;
     opacity: 1;
   }
   30% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(80px);
     visibility: visible;
     opacity: 1;
   }
   40% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(-200px);
     visibility: visible;
     opacity: 1;
   }
   50% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(-220px);
     visibility: visible;
     opacity: 1;
   }
   60% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(-200px);
     visibility: visible;
     opacity: 1;
   }
   70% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(80px);
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(60px);
     visibility: visible;
     opacity: 0.8;
   }
-  80% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
-    visibility: visible;
-    opacity: 0.6;
-  }
   100% {
-    transform: translateY(0);
-    transform: background-color(rgba(255, 255, 255, 0));
+    transform: translateY(40px);
     visibility: hidden;
     opacity: 0;
+  }
+}
+@keyframes block-loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  10% {
+    visibility: visible;
+    opacity: 1;
+  }
+  20% {
+    visibility: visible;
+    opacity: 1;
+  }
+  30% {
+    visibility: visible;
+    opacity: 1;
+  }
+  40% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  60% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes checkRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(90deg);
+  }
+  66% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .header {
@@ -143,6 +201,10 @@ h1, .loader {
 }
 .sectionFooter__items p {
   padding-top: 14px;
+}
+.sectionFooter__items :nth-child(4) {
+  text-decoration: none;
+  color: white;
 }
 .sectionFooter__items i {
   padding-right: 10px;
@@ -180,6 +242,9 @@ h1, .loader {
   padding: 19px 22px;
   border-radius: 30px;
   border-style: none;
+}
+.head__heading button:hover {
+  opacity: 0.8;
 }
 
 .fonctionnement {
@@ -297,7 +362,7 @@ h1, .loader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 335px;
+  width: 100%;
   height: 77px;
   padding: 20px 24px 20px 14px;
   background-color: white;
@@ -318,10 +383,12 @@ h1, .loader {
 .header__returnHome {
   display: flex;
   align-items: center;
+  color: black;
 }
 .header__returnHome i {
   font-size: 1.6rem;
   font-weight: bold;
+  color: black;
 }
 .header img {
   margin: auto;
@@ -364,20 +431,22 @@ h1, .loader {
 .menu__title .far.fa-heart {
   font-size: 1.6rem;
   right: 27px;
-  z-index: 10;
-  transition: all 0.4s ease-in-out;
+  color: black;
+  background-clip: text;
+  background-color: transparent;
+  opacity: 1;
 }
 .menu__title .far.fa-heart:hover {
-  background: linear-gradient(to bottom right, #FF79DA 15%, #9356DC);
+  animation: gradientHeart 1s linear;
 }
-
-.food__title {
+@keyframes gradientHeart {}
+.menu .food__title {
   width: fit-content;
   text-transform: uppercase;
   font-weight: normal;
   padding: 36px 0 13px 0;
 }
-.food__title::after {
+.menu .food__title::after {
   content: "";
   display: block;
   width: 60%;
@@ -385,7 +454,7 @@ h1, .loader {
   margin-top: 9px;
   background-color: #99E2D0;
 }
-.food .menuItems {
+.menu .food .menuItems {
   background-color: white;
   margin: 13px 0;
   padding: 0px 0px 0px 12px;
@@ -394,23 +463,29 @@ h1, .loader {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
+  animation: apparition 1.2s linear;
+  transition: transform 2s ease-out;
 }
-.food .menuItems:hover .menuItems__iconCheck {
-  width: 17%;
-}
-.food .menuItems:hover .menuItems__price {
-  width: 33%;
-}
-.food .menuItems:hover .menuItems__text {
+.menu .food .menuItems:hover .menuItems__text {
   width: 50%;
 }
-.food .menuItems__title {
+.menu .food .menuItems:hover .menuItems__price {
+  width: 33%;
+}
+.menu .food .menuItems:hover .menuItems__iconCheck {
+  width: 17%;
+}
+.menu .food .menuItems:hover .menuItems__iconCheck i {
+  animation: checkRotate 0.3s linear;
+}
+.menu .food .menuItems__title {
   padding-bottom: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.food .menuItems__text {
+.menu .food .menuItems__text {
   width: 83%;
   padding: 16px 0px;
   display: flex;
@@ -419,18 +494,18 @@ h1, .loader {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.food .menuItems__text p {
+.menu .food .menuItems__text p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.food .menuItems__price {
+.menu .food .menuItems__price {
   padding: 16px 23px 16px 0;
   width: 17%;
   display: flex;
   justify-content: flex-end;
 }
-.food .menuItems__iconCheck {
+.menu .food .menuItems__iconCheck {
   width: 0;
   height: 89px;
   overflow: hidden;
@@ -439,6 +514,19 @@ h1, .loader {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 1.6rem;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,6 +23,12 @@
         padding-top: 14px;
     }
 
+    // Lien contact
+    &__items :nth-child(4) {
+        text-decoration: none;
+        color: $colorFourth;
+    }
+
     &__items i {
         padding-right: 10px;
     }
