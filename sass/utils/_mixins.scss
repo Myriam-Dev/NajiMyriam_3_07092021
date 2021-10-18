@@ -10,11 +10,18 @@
 // gradient
 
 @mixin gradient($direction, $list) { 
+    box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.116);
     background: linear-gradient($direction, $list);
+    transition: opacity .5s linear;
     &:hover {
         opacity: 0.8;
     }
 }
+
+@mixin gradientHeart($direction, $list) { 
+    background: linear-gradient($direction, $list);
+}
+
 
 // Page d'accueil
 // Fonctionnement
