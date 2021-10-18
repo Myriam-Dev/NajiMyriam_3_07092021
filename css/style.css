@@ -19,27 +19,32 @@ body {
   font-weight: 400;
 }
 
-h1, .loader {
+.loader {
   font-family: "Shrikhand", cursive;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6em;
+}
+
 .block-loader {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.699);
   z-index: 50;
   animation: block-loader 3s linear;
   visibility: hidden;
 }
 .block-loader .loader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
   visibility: hidden;
 }
 .block-loader .loader > div {
@@ -115,34 +120,6 @@ h1, .loader {
 }
 @keyframes block-loader {
   0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  10% {
-    visibility: visible;
-    opacity: 1;
-  }
-  20% {
-    visibility: visible;
-    opacity: 1;
-  }
-  30% {
-    visibility: visible;
-    opacity: 1;
-  }
-  40% {
-    visibility: visible;
-    opacity: 1;
-  }
-  50% {
-    visibility: visible;
-    opacity: 1;
-  }
-  60% {
-    visibility: visible;
-    opacity: 1;
-  }
-  70% {
     visibility: visible;
     opacity: 1;
   }
@@ -432,14 +409,18 @@ h1, .loader {
   font-size: 1.6rem;
   right: 27px;
   color: black;
-  background-clip: text;
-  background-color: transparent;
   opacity: 1;
+  transition: background 2s linear;
 }
 .menu__title .far.fa-heart:hover {
-  animation: gradientHeart 1s linear;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #FF79DA 15%, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-@keyframes gradientHeart {}
+.menu__title .far.fa-heart:hover:hover {
+  opacity: 0.8;
+}
 .menu .food__title {
   width: fit-content;
   text-transform: uppercase;
@@ -465,7 +446,15 @@ h1, .loader {
   overflow: hidden;
   cursor: pointer;
   animation: apparition 1.2s linear;
-  transition: transform 2s ease-out;
+}
+.menu .food .menuItems:nth-child(1) {
+  animation-delay: 0s;
+}
+.menu .food .menuItems:nth-child(2) {
+  animation-delay: 1s;
+}
+.menu .food .menuItems:nth-child(3) {
+  animation-delay: 2s;
 }
 .menu .food .menuItems:hover .menuItems__text {
   width: 50%;
@@ -527,6 +516,25 @@ h1, .loader {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.bookButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bookButton button {
+  width: 220px;
+  height: 50px;
+  background: linear-gradient(to bottom right, #FF79DA 15%, #9356DC);
+  color: white;
+  font-weight: bold;
+  margin-top: 34px;
+  padding: 19px 22px;
+  border-radius: 30px;
+  border-style: none;
+}
+.bookButton button:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */
