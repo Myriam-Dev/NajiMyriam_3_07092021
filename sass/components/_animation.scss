@@ -11,6 +11,11 @@
     z-index: 50;
     animation: block-loader 3s linear;
     visibility: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
 
 
     .loader {
@@ -19,12 +24,27 @@
         justify-content: center;
         align-items: center;
         visibility: hidden;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
 
-        & > div {
+        & div {
+            width: 20vw;
+            height: 20vh;     
             font-size: 3em;
             animation: loader 3s cubic-bezier(0,.66,.67,1.01) alternate;
             visibility: hidden;
-            margin: 4px;
+            display: flex;
+            justify-content: center space-evenly;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 3px;
         }
         & > div:nth-child(1) {
             color: $colorPrimary;

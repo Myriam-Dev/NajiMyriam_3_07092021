@@ -22,6 +22,7 @@ body {
 
 .loader {
   font-family: "Shrikhand", cursive;
+  font-size: 1em;
 }
 
 h1 {
@@ -40,6 +41,11 @@ h1 {
   z-index: 50;
   animation: block-loader 3s linear;
   visibility: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 .block-loader .loader {
   max-width: 1440px;
@@ -47,12 +53,27 @@ h1 {
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
 }
-.block-loader .loader > div {
+.block-loader .loader div {
+  width: 20vw;
+  height: 20vh;
   font-size: 3em;
   animation: loader 3s cubic-bezier(0, 0.66, 0.67, 1.01) alternate;
   visibility: hidden;
-  margin: 4px;
+  display: flex;
+  justify-content: center space-evenly;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 3px;
 }
 .block-loader .loader > div:nth-child(1) {
   color: #9356DC;
