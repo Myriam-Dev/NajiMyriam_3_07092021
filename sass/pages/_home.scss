@@ -27,7 +27,7 @@
     &__heading button{
         width: 220px;
         height: 50px;
-        @include gradient(to bottom right, $list1);
+        @include gradientButton(to bottom right, $list1);
         color: white;
         font-weight: bold;
         margin-top: 34px;
@@ -42,12 +42,18 @@
 .fonctionnement {
     width: 100%;
     padding: 56px 20px;
+    @media screen and (min-width: 667px) {
+        h2 {
+            text-align: center;
+        }    
+    }
+
 
     .use {
         width: 100%;
         margin-top: 32px;
         padding-left: 15px;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;    
@@ -56,7 +62,7 @@
         &__items{
             @include block-use; 
             position: relative;    
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 768px) {
                 display: flex;
                 width: 30%;
                 min-width: 310px;
@@ -81,6 +87,13 @@
     width: 100%;
     padding: 56px 20px;
     background-color: $colorBackLight;
+    @media screen and (min-width: 667px) {
+        padding: 56px 0px;
+        h2 {
+            text-align: center;
+        }
+    }
+
     .restaurants {
         width: 100%;
         padding-top: 32px;

@@ -1,0 +1,17 @@
+.bookButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+& button {
+    width: 220px;
+    height: 50px;
+    @include gradientButton(to bottom right, $list1);
+    color: white;
+    font-weight: bold;
+    margin-top: 34px;
+    padding: 19px 22px;
+    border-radius: 30px; 
+    border-style: none;  
+}  
+}

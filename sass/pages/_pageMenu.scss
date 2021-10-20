@@ -41,7 +41,7 @@
     padding: 44px 13px 83px 13px;
     border-radius: 45px 45px 0 0;
     @media screen and (min-width: 768px) {
-        width: 80%;
+        width: 70%;
         display: flex;
         flex-direction: column;
     }
@@ -70,7 +70,7 @@
             &::after {
                 content: "";
                 display: block;
-                width: 60px;
+                width: 60%;
                 height: 5px;
                 margin-top: 9px;
                 background-color: $colorThird;
@@ -91,26 +91,28 @@
             animation: apparition 1.2s ease-in-out;
             
             // Action au clic mobile et tablette
-            @media screen and (max-width: 1024px) {
-                &:focus .menuItems__text{
+            @media screen and (max-width: 959px) {
+                &:active .menuItems__text{
                     width: 50%;
                 }
     
-                &:focus .menuItems__price{
+                &:active .menuItems__price{
                     width: 33%;
                 }
     
-                &:focus .menuItems__iconCheck{
+                &:active .menuItems__iconCheck{
                     width: 17%;
                 }
     
-                &:focus .menuItems__iconCheck i{
+                &:active .menuItems__iconCheck i{
                     animation: checkRotate .3s linear;
                 }
     
             }
         
             // Action au hover sur desktop
+            @media screen and (min-width: 960px) {
+
             &:hover .menuItems__text{
                 width: 50%;
             }
@@ -126,6 +128,7 @@
             &:hover .menuItems__iconCheck i{
                 animation: checkRotate .3s linear;
             }
+        }
    
             &__title {
                 padding-bottom: 15px;
@@ -242,23 +245,26 @@
     }
 }
 
-.bookButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    & button {
-        width: 220px;
-        height: 50px;
-        @include gradient(to bottom right, $list1);
-        color: white;
-        font-weight: bold;
-        margin-top: 34px;
-        padding: 19px 22px;
-        border-radius: 30px; 
-        border-style: none;  
-    }  
+@keyframes checkRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(90deg);
+    }
+    66% {
+        transform: rotate(180deg);
+    }
+    90% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
+
+
 
 
 
