@@ -57,7 +57,9 @@
 
     &__title .far.fa-heart{
         font-size: 1.6rem;
-        right: 27px;
+        position: relative;
+        width: 26px;
+        right: 20px;
         @include heart;
     }
 

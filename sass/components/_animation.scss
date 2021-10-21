@@ -73,7 +73,7 @@
     }
           
     .loader-spinner div {
-        font-size: 20px;
+        font-size: 30px;
         opacity: 0;
         display: 
         inline-block;
@@ -91,7 +91,6 @@
       .loader-spinner div:nth-child(4) {
         animation: spinner 3s 100ms ease;
         color: $colorSecondary;
-
       }
       
       .loader-spinner div:nth-child(3) {
@@ -120,11 +119,6 @@
     80% {
         visibility: visible;
         opacity: 0.9;
-        position: fixed;
-    }
-    80% {
-        visibility: visible;
-        opacity: 0.8;
         position: fixed;
     }
     100% {

@@ -130,7 +130,7 @@ h1 {
   text-align: center;
 }
 .block-loader .loader-spinner div {
-  font-size: 20px;
+  font-size: 30px;
   opacity: 0;
   display: inline-block;
 }
@@ -168,11 +168,6 @@ h1 {
   80% {
     visibility: visible;
     opacity: 0.9;
-    position: fixed;
-  }
-  80% {
-    visibility: visible;
-    opacity: 0.8;
     position: fixed;
   }
   100% {
@@ -547,7 +542,9 @@ h1 {
 }
 .menu__title .far.fa-heart {
   font-size: 1.6rem;
-  right: 27px;
+  position: relative;
+  width: 26px;
+  right: 20px;
 }
 @media screen and (min-width: 960px) {
   .menu__title .far.fa-heart:hover {
