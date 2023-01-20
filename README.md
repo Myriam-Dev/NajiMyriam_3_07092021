@@ -1,5 +1,5 @@
 # NajiMyriam_3_07092021
-# Création du site "Ohmyfood" pour OpenClassRooms pour le parcours de developpeur front avec animation et utilisation de SASS 
+# Création du site "Ohmyfood" pour OpenClassRooms pour le parcours de developpeur front avec animations/transitions et utilisation de SASS 
 
 # Cahier des charges :
 # Créer le site de commande de repas en ligne de "Ohmyfood" en respectant la maquette délivrée en version mobile
